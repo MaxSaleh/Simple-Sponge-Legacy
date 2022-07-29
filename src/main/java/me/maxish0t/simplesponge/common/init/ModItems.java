@@ -1,5 +1,6 @@
 package me.maxish0t.simplesponge.common.init;
 
+import me.maxish0t.simplesponge.SimpleSponge;
 import me.maxish0t.simplesponge.common.item.*;
 import me.maxish0t.simplesponge.common.tab.SimpleSpongeTab;
 import me.maxish0t.simplesponge.util.ModReference;

@@ -9,7 +9,6 @@ import me.maxish0t.simplesponge.util.helper.StringHelper;
 import net.minecraft.ChatFormatting;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.InteractionResultHolder;
@@ -79,7 +78,7 @@ public class ItemSpongeOnAStickBase extends Item {
                             .append(ChatFormatting.RED + " / ")
                             .append(StringHelper.formatNumber(stack.getMaxDamage()))
                             .append(" ")
-                            .append(new TranslatableComponent("tooltip." + ModReference.MOD_ID + ".durability"))
+                            .append(Component.translatable("tooltip." + ModReference.MOD_ID + ".durability"))
             );
         }
     }

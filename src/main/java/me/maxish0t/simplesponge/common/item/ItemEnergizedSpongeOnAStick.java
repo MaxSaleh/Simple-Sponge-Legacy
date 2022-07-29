@@ -32,7 +32,7 @@ public class ItemEnergizedSpongeOnAStick extends ItemSpongeOnAStickBase implemen
 
     @Override
     public void fillItemCategory(CreativeModeTab group, NonNullList<ItemStack> items) {
-        if (this.allowdedIn(group)) {
+        if (this.allowedIn(group)) {
             if (ModConfigs.CONFIG.enableEnergizedSpongeOnAStick.get()) {
                 ItemStack empty = new ItemStack(this);
                 items.add(empty);

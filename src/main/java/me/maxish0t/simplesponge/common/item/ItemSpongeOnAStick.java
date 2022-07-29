@@ -31,7 +31,7 @@ public class ItemSpongeOnAStick extends ItemSpongeOnAStickBase {
 
     @Override
     public void fillItemCategory(CreativeModeTab group, NonNullList<ItemStack> items) {
-        if (this.allowdedIn(group)) {
+        if (this.allowedIn(group)) {
             if (ModList.get().isLoaded("openblocks")) {
                 if (ModConfigs.CONFIG.openBlocksIntegration.get()) {
                     if (ForgeRegistries.ITEMS.getValue(new ResourceLocation("openblocks", "sponge_on_a_stick")) == null) {

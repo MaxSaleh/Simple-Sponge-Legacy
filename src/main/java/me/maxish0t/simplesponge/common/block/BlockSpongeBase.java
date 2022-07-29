@@ -3,6 +3,7 @@ package me.maxish0t.simplesponge.common.block;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
@@ -68,10 +69,10 @@ public class BlockSpongeBase extends Block {
 
     @Override
     @Deprecated
-    public void tick(BlockState p_60462_, ServerLevel p_60463_, BlockPos p_60464_, Random p_60465_) {
-        clearupLiquid(p_60463_, p_60464_);
-        p_60463_.getBlockTicks().schedule(new ScheduledTick<>(
-                this, p_60464_, 2, TICK_RATE + RANDOM.nextInt(5)));
+    public void tick(BlockState p_222945_, ServerLevel p_222946_, BlockPos p_222947_, RandomSource p_222948_) {
+        clearupLiquid(p_222946_, p_222947_);
+        p_222946_.getBlockTicks().schedule(new ScheduledTick<>(
+                this, p_222947_, 2, TICK_RATE + RANDOM.nextInt(5)));
     }
 
     private void clearupLiquid(Level level, BlockPos pos) {

@@ -3,8 +3,6 @@ package me.maxish0t.simplesponge.util.helper;
 import net.minecraft.ChatFormatting;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.MutableComponent;
-import net.minecraft.network.chat.TextComponent;
-import net.minecraft.network.chat.TranslatableComponent;
 import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.ModList;
 
@@ -27,7 +25,7 @@ public class StringHelper {
     }
 
     public static MutableComponent formatNumber(long number) {
-        return new TextComponent(NumberFormat.getInstance().format(number));
+        return Component.literal(NumberFormat.getInstance().format(number));
     }
 
     public static String getModNameByID(String modid) {
@@ -41,17 +39,17 @@ public class StringHelper {
     public static MutableComponent formatHarvestLevel(String modid, int harvestLevel) {
         return localize(modid, "harvest_level." + harvestLevel).toString()
                 .equals(modid + ".harvest_level." + harvestLevel)
-                ? new TextComponent(String.valueOf(harvestLevel))
+                ? Component.literal(String.valueOf(harvestLevel))
                 : localize(modid, "harvest_level." + harvestLevel);
     }
 
     public static MutableComponent localize(String modid, String unlocalized, Object... args) {
         String toLocalize = modid + "." + unlocalized;
         if (args != null && args.length > 0) {
-            return new TranslatableComponent(toLocalize, args);
+            return Component.translatable(toLocalize, args);
         }
         else {
-            return new TranslatableComponent(toLocalize);
+            return Component.translatable(toLocalize);
         }
     }
 }
