@@ -1,0 +1,29 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="MIT"
+issueTrackerURL="https://discord.gg/A8YKbxv25w"
+
+[[mods]]
+modId="simplesponge"
+version="1.0.0"
+displayName="Simple Sponge"
+displayURL="https://github.com/JackyyTV/SimpleSponge"
+logoFile="logo.png"
+credits="Jackyy, ThatGamerBlue"
+authors="MaxIsH0t"
+description='''
+OpenBlocks Sponge port for 1.18.2+, with some extra sprinkles!
+'''
+
+[[dependencies.simplesponge]]
+modId="forge"
+mandatory=true
+versionRange="[40,)"
+ordering="NONE"
+side="BOTH"
+[[dependencies.simplesponge]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.18.2,1.19)"
+ordering="NONE"
+side="BOTH"

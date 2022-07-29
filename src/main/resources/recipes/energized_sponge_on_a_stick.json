@@ -1,0 +1,30 @@
+{
+  "type": "crafting_shaped",
+  "conditions": [
+    {
+      "type": "simplesponge:energized_sponge_on_a_stick", "enabled": true
+    }
+  ],
+  "pattern": [
+    "R#R",
+    "GBG",
+    "RBR"
+  ],
+  "key": {
+    "#": {
+      "item": "simplesponge:magmatic_sponge_on_a_stick"
+    },
+    "B": {
+      "tag": "forge:rods/blaze"
+    },
+    "R": {
+      "tag": "forge:dusts/redstone"
+    },
+    "G": {
+      "tag": "forge:ingots/gold"
+    }
+  },
+  "result": {
+    "item": "simplesponge:energized_sponge_on_a_stick"
+  }
+}
